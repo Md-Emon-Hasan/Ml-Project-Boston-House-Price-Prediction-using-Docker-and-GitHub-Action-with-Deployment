@@ -1,0 +1,125 @@
+/* Background with gradient and subtle animation */
+body {
+    /* background: linear-gradient(135deg, #74b9ff, #666666); */
+    /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+    background-image: linear-gradient(to right, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    padding-top: 50px;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1.5s ease-out;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #fff;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+h2 {
+    font-family: 'Pacifico';
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
+}
+
+/* Button styles */
+.btn {
+    padding: 12px 20px;
+    font-size: 20px;
+}
+
+button {
+    background-color: #6c5ce7;
+    border: none;
+    color: #fff;
+    /* padding: 20px 20px; */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #2f00ff;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer styles */
+footer {
+    margin-top: 40px;
+    color: #dfe6e9;
+    font-size: 14px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+footer a {
+    color: #dfe6e9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0091cf;
+    text-decoration: none;
+}
+
+/* Card styles */
+.info-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    animation: popIn 1s ease-out;
+}
+
+.info-card:hover {
+    transform: scale(1.03);
+}
+  
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
